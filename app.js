@@ -12,3 +12,10 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElement = document.querySelectorAll('.hidden')
 hiddenElement.forEach((el) => observer.observe(el))
 
+function stickyScroll() {
+    let header = document.querySelector('header')
+
+    header.classList.toggle('sticky', window.scrollY > 100)
+} 
+
+window.onscroll = stickyScroll

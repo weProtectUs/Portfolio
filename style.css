@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
 
 :root {
-    --main-bg-color: #001c43;
+    --main-bg-color: #020c1a;
+    --second-bg-color: #001c43;
     --main-color: #00338e;
     --second-main-color: #912bcc;
     --text-color: #c4ced4;
@@ -26,21 +27,27 @@ body {
     color: var(--text-color);
 }
 
-header {
+.header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 2.5rem 4%;
-    background: #031631;
+    padding: 2rem 4%;
+    border-bottom: 2px solid var(--main-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
+    z-index: 100;
+    transition: .2s;
+}
+
+.header.sticky {
+    background-color: var(--second-bg-color);
 }
 
 .logo {
     font-size: 3.5rem;
-    color: var(--text-color);
+    color: var(--main-bg-color);
+    -webkit-text-stroke: 3px var(--main-color);
     font-weight: 800;
     letter-spacing: 9px;
 }    
@@ -54,8 +61,7 @@ header {
 }
 
 .navbar a:hover {
-    color:var(--main-color);
-    text-shadow: 1px 2px 4px var(--text-color);
+    color:var(--second-main-color);
 }
 
 .flex-content {
@@ -69,11 +75,10 @@ header {
 }
 
 .introduction-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.8;
     font-weight: 600;
     flex-shrink: 2;
-    text-shadow: 5px 4px 6px #080808;
 }
 
 #greeting {
@@ -93,15 +98,14 @@ header {
 
 .skills {
     position: relative;
-    top: 15rem;
+    top: 19rem;
     text-align: center;
 }
 
 .skills-title {
     font-size: 2.75rem;
     letter-spacing: 2.5px;
-    margin-bottom: 1rem;
-    text-shadow: 5px 4px 6px #080808;
+    margin-bottom: 2rem;
 }
 
 .flex-logos {
@@ -149,14 +153,26 @@ header {
     transition-delay: 800ms;
 }
 
+
+.navbar a:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.navbar a:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.navbar a:nth-child(4) {
+    transition-delay: 600ms;
+}
+
 footer {
     position: relative;
-    top: 18rem;
+    top: 25rem;
     bottom: 0;
     width: 100%;
     padding: 1.75rem 0;
     text-align: center;
-    background-color: #020c1a;
+   background: var(--second-bg-color);
     margin-top: 2rem;
 }
-
