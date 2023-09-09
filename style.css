@@ -173,6 +173,60 @@ footer {
     width: 100%;
     padding: 1.75rem 0;
     text-align: center;
-   background: var(--second-bg-color);
+    background: var(--second-bg-color);
     margin-top: 2rem;
 }
+
+@media only screen and (max-width:500px) {
+    .header {
+        flex-direction: column;
+        padding: 1.75rem 1.5rem;
+    }
+
+    .logo {
+        font-size: 3.5rem;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+        margin-right: 1rem;
+    }
+
+    .personal-img {
+        display: none;
+    }
+
+    .flex-content {
+        margin-top: 1rem;
+        padding: 0 2rem;
+    }
+
+    .introduction-text {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    #greeting {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .skills {
+        position: relative;
+        top: 15rem;
+        padding: 0 2rem;
+    }
+
+    .skills-title {
+        font-size: 2.25rem;
+    }
+
+    .flex-logos i {
+        font-size: 1.75rem;
+    }
+
+    footer {
+        position: relative;
+        top: 17rem;
+    }
+} 
