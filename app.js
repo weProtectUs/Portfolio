@@ -19,3 +19,14 @@ function stickyScroll() {
 } 
 
 window.onscroll = stickyScroll
+
+function menuOpen() {
+    let menuList = document.getElementById('menu-list')
+
+    menuList.classList.toggle('retract')
+    menuList.classList.toggle('expand')
+}
+
+let menu = document.getElementById('menu-icon')
+
+menu.onclick = menuOpen
