@@ -136,7 +136,7 @@ body {
 
 .projects {
     position: relative;
-    top: 18rem;
+    top: 15rem;
     text-align: center;
 }
 
@@ -151,6 +151,11 @@ body {
     color: var(--text-color);
 }
 
+.flex-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .contacts {
     position: relative;
@@ -176,7 +181,7 @@ body {
 }
 
 .contact-icon .bx:hover {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
     color: var(--main-bg-color);
     background-color: var(--main-color);
 }
@@ -334,5 +339,6 @@ footer {
         position: relative;
         bottom: 0;
         left: 0;
+        margin-bottom: 0;
     }
 } 
